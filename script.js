@@ -17,6 +17,7 @@ document.addEventListener("keydown", handleStart, { once: true })
 let lastTime
 let speedScale
 let score
+
 function update(time) {
 if (lastTime == null) {
 lastTime = time
@@ -57,6 +58,20 @@ speedScale += delta * SPEED_SCALE_INCREASE
 function updateScore(delta) {
 score += delta * 0.01
 scoreElem.textContent = Math.floor(score)
+
+console.log(score)
+console.log(delta)
+
+
+
+
+
+if (score >= 200) {
+    console.log("passed 50" + scoreElem + "")
+}
+
+
+
 }
 
 function handleStart() {
@@ -88,4 +103,5 @@ worldToPixelScale = window.innerHeight / WORLD_HEIGHT
 
 worldElem.style.width = `${WORLD_WIDTH * worldToPixelScale}px`
 worldElem.style.height = `${WORLD_HEIGHT * worldToPixelScale}px`
+
 }
