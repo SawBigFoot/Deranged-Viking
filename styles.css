@@ -38,6 +38,7 @@ body {
 }
 
 .start-screen {
+  font-family: "Heorot Italic";
   position: absolute;
   font-size: 5vmin;
   top: 50%;
