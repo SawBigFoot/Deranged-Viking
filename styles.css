@@ -12,12 +12,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: red;
 }
 
 .world {
   overflow: hidden;
   position: relative;
+  background-color: aqua;
 }
 
 .score {
