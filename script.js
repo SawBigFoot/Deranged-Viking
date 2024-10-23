@@ -62,13 +62,13 @@ scoreElem.textContent = Math.floor(score)
 console.log(score)
 console.log(delta)
 
-if (score >= 50) {
-    
-    if (loopconst) {
-        loopconst = false
-        console.log("passed 50" + scoreElem + "")
-    }
-}
+// if (score >= 50) {
+//
+ //   if (loopconst) {
+  //      loopconst = false
+  //      console.log("passed 50" + scoreElem + "")
+  //  }
+//}
 
 }
 
