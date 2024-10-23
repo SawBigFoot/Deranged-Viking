@@ -70,7 +70,7 @@ console.log(delta)
 //     }
 // }
 
-// }
+}
 
 function handleStart() {
 lastTime = null
