@@ -24,6 +24,8 @@ document.removeEventListener("keydown", onJump)
 document.addEventListener("keydown", onJump)
 }
 
+let bg = document.getElementById("w3");
+
 export function updateDino(delta, speedScale) {
 handleRun(delta, speedScale)
 handleJump(delta)
@@ -35,6 +37,7 @@ return dinoElem.getBoundingClientRect()
 
 export function setDinoLose() {
 dinoElem.src = "imgs/dino-lose2.png"
+bg.style.backgroundColor = "white"
 }
 
 function handleRun(delta, speedScale) {

@@ -5,7 +5,7 @@ import { updateCactus, setupCactus, getCactusRects } from "./cactus.js";
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 20;
 const SPEED_SCALE_INCREASE = 0.00001;
-const background = document.getElementById("w3");
+let background = document.getElementById("w3");
 
 const worldElem = document.querySelector("[data-world]");
 const scoreElem = document.querySelector("[data-score]");
@@ -14,6 +14,10 @@ const startScreenElem = document.querySelector("[data-start-screen]");
 setPixelToWorldScale();
 window.addEventListener("resize", setPixelToWorldScale);
 document.addEventListener("keydown", handleStart, { once: true });
+
+let loopscore50 = 1
+let loopscore100 = 1
+let loopscore150 = 1
 
 let lastTime;
 let speedScale;
@@ -57,17 +61,25 @@ function updateSpeedScale(delta) {
 }
 
 function updateScore(delta) {
-  score += delta * 0.01;
-  scoreElem.textContent = Math.floor(score);
 
-  console.log(score);
-  console.log(delta);
-  if (score >= 50) {
-    if (loopscore) {
-      loopscore = false;
-      background.style.backgroundImage = "red";
-    }
-  }
+    score += delta * 0.01;
+scoreElem.textContent = Math.floor(score);
+
+console.log(score);
+console.log(delta);
+if (score >= 50 && loopscore50) {
+    loopscore50 = 0
+    background.style.backgroundColor= "red";
+}
+if (score >= 100 && loopscore100); {
+    loopscore100 = 0
+    background.style.backgroundImage = "blue";
+}
+if (score >= 150 && loopscore150); { 
+    loopscore150 = 0
+    background.style.backgroundImage = "black";
+}
+
 }
 
 function handleStart() {
