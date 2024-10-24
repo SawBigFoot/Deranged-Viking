@@ -77,14 +77,14 @@ function updateScore(delta) {
     if (loopimagetree2) {
         console.log("Passed 50") 
         backgroundElems.forEach(elem => {
-        elem.src = "imgs/Tree3.png";
+        elem.src = "imgs/Tree2.png";
         if (score >= 100)
             loopimagetree2 = false
     }); 
     if (loopimagetree2 == false) {
         console.log("Passed 50") 
         backgroundElems.forEach(elem => {
-        elem.src = "imgs/Tree2.png";
+        elem.src = "imgs/Tree.png";
     });
     }
     }
