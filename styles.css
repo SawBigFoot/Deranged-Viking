@@ -7,6 +7,11 @@
   color: white;
 }
 
+@font-face {
+  font-family: "Viking Font";
+  src: url(fonts/HeorotItalic-WMOA.ttf);
+}
+
 body {
   margin: 0;
   display: flex;
@@ -28,7 +33,7 @@ body {
 }
 
 .start-screen {
-  font-family: "Heorot Italic";
+  font-family: "Viking Font";
   position: absolute;
   font-size: 5vmin;
   top: 50%;
