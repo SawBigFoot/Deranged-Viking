@@ -4,6 +4,7 @@
   box-sizing: border-box;
   user-select: none;
   font-family: fantasy;
+  color: white;
 }
 
 body {
@@ -60,7 +61,7 @@ body {
   --left: 0;
   position: absolute;
   width: 200%;
-  height: 60%;
+  height: 63vh;
   top: 7%;
   left: calc(var(--left) * 1%);
   z-index: -1;
