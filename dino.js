@@ -8,6 +8,10 @@ let backgroundElems = document.querySelectorAll(
   "img.background[data-background]"
 );
 
+// if (backgroundElems == "imgs/Tree.png") {
+//     console.log("Character Swap")
+// }
+
 const dinoElem = document.querySelector("[data-dino]");
 const JUMP_SPEED = 0.45;
 const GRAVITY = 0.0015;
