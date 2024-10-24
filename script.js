@@ -72,6 +72,7 @@ function updateScore(delta) {
   console.log(score);
   console.log(delta);
   let loopimagetree2 = 1
+  let loopfortree4 = 0
 
   if (score >= 50) {
     if (loopimagetree2) {
