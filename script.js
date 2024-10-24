@@ -71,12 +71,23 @@ function updateScore(delta) {
 
   console.log(score);
   console.log(delta);
-  let setpictureback = 1
+  let loopimagetree2 = 1
+
   if (score >= 50) {
-    console.log("Passed 50") 
-    backgroundElems.forEach(elem => {
+    if (loopimagetree2) {
+        console.log("Passed 50") 
+        backgroundElems.forEach(elem => {
+        elem.src = "imgs/Tree3.png";
+        if (score >= 100)
+            loopimagetree2 = false
+    }); 
+    if (loopimagetree2 == false) {
+        console.log("Passed 50") 
+        backgroundElems.forEach(elem => {
         elem.src = "imgs/Tree2.png";
     });
+    }
+    }
 }
   if (score >= 50 && loopscore50) {
     loopscore50 = 0;
