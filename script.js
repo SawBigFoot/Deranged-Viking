@@ -94,6 +94,8 @@ function updateScore(delta) {
             loopfortree4 = 1
         }
     });
+
+    
     }
     }
 }
