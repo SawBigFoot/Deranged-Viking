@@ -40,7 +40,7 @@ return dinoElem.getBoundingClientRect()
 export function setDinoLose() {
 dinoElem.src = "imgs/dino-lose2.png"
 backgroundElems.forEach(elem => {
-    elem.src = "imgs/Tree.png";
+    elem.src = "imgs/Tree3.png";
 });
 
 }
