@@ -19,16 +19,6 @@ body {
   position: relative;
 }
 
-#w3 {
-  display: flex;
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-}
-
 .score {
   position: absolute;
   font-size: 3vmin;
@@ -64,6 +54,17 @@ body {
   bottom: 0;
   left: calc(var(--left) * 1%);
 }
+
+.background {
+    --left: 0;
+    position: absolute;
+    width: 200%;
+    height: 160 %;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+    z-index: -1;
+  }
+
 
 .dino {
   --bottom: 0;

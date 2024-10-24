@@ -1,11 +1,11 @@
 import { updateGround, setupGround } from "./ground.js";
+import { updateBackGround, setupBackGround } from "./ground.js";
 import { updateDino, setupDino, getDinoRect, setDinoLose } from "./dino.js";
 import { updateCactus, setupCactus, getCactusRects } from "./cactus.js";
 
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 20;
 const SPEED_SCALE_INCREASE = 0.00001;
-let background = document.getElementById("w3");
 
 const worldElem = document.querySelector("[data-world]");
 const scoreElem = document.querySelector("[data-score]");
@@ -32,6 +32,7 @@ function update(time) {
   const delta = time - lastTime;
 
   updateGround(delta, speedScale);
+  updateBackGround(delta, speedScale);
   updateDino(delta, speedScale);
   updateCactus(delta, speedScale);
   updateSpeedScale(delta);
@@ -68,17 +69,15 @@ function updateScore(delta) {
   console.log(delta);
   if (score >= 50 && loopscore50) {
     loopscore50 = 0;
-    background.style.backgroundImage = "url('imgs/Tree.png')";
+    // background.style.backgroundImage = "url('imgs/Tree.png')";
   }
   if (score >= 100 && loopscore100);
   {
     loopscore100 = 0;
-    background.style.backgroundImage = "blue";
   }
   if (score >= 150 && loopscore150);
   {
     loopscore150 = 0;
-    background.style.backgroundImage = "black";
   }
 }
 
