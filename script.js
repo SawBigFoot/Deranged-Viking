@@ -85,6 +85,9 @@ function updateScore(delta) {
         console.log("Passed 50") 
         backgroundElems.forEach(elem => {
         elem.src = "imgs/Tree.png";
+        if (score >= 150) {
+            loopfortree4 = 1
+        }
     });
     }
     }
