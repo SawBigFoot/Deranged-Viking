@@ -1,3 +1,5 @@
+
+
 import {
 
 getCustomProperty,
@@ -10,8 +12,7 @@ setCustomProperty,
 
 const SPEED = 0.05
 const groundElems = document.querySelectorAll("[data-ground]")
-let backgroundElems = document.querySelectorAll("img.background[data-background]");
-
+var backgroundElems = document.querySelectorAll("img.background[data-background]");
 
 export function setupGround() {
     setCustomProperty(groundElems[0], "--left", 0)
@@ -25,6 +26,7 @@ export function setupBackGround() {
 
 
 export function updateGround(delta, speedScale) {
+    
 
     groundElems.forEach(ground => {
 

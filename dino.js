@@ -4,6 +4,8 @@ setCustomProperty,
 getCustomProperty,
 } from "./updateCustomProperty.js"
 
+let backgroundElems = document.querySelectorAll("img.background[data-background]");
+
 const dinoElem = document.querySelector("[data-dino]")
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
@@ -37,6 +39,9 @@ return dinoElem.getBoundingClientRect()
 
 export function setDinoLose() {
 dinoElem.src = "imgs/dino-lose2.png"
+backgroundElems.forEach(elem => {
+    elem.src = "imgs/Tree.png";
+});
 
 }
 

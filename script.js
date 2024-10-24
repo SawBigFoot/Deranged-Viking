@@ -3,6 +3,10 @@ import { updateBackGround, setupBackGround } from "./ground.js";
 import { updateDino, setupDino, getDinoRect, setDinoLose } from "./dino.js";
 import { updateCactus, setupCactus, getCactusRects } from "./cactus.js";
 
+
+let backgroundElems = document.querySelectorAll("img.background[data-background]");
+
+
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 20;
 const SPEED_SCALE_INCREASE = 0.00001;
@@ -21,10 +25,10 @@ let loopscore150 = 1;
 
 let lastTime;
 let speedScale;
-let score;
+export let score;
 
 function update(time) {
-  if (lastTime == null) {
+if (lastTime == null) {
     lastTime = time;
     window.requestAnimationFrame(update);
     return;
@@ -67,6 +71,13 @@ function updateScore(delta) {
 
   console.log(score);
   console.log(delta);
+  let setpictureback = 1
+  if (score >= 50) {
+    console.log("Passed 50") 
+    backgroundElems.forEach(elem => {
+        elem.src = "imgs/Tree2.png";
+    });
+}
   if (score >= 50 && loopscore50) {
     loopscore50 = 0;
     // background.style.backgroundImage = "url('imgs/Tree.png')";
